@@ -341,7 +341,7 @@ ul {
 
 .aActive {
     pointer-events: none;
-    color: #fff;
+    color: #fff !important;
     background-color: #cab882;
 }
 

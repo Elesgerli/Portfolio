@@ -19,7 +19,7 @@
     <title>Portfolio</title>
 </head>
 
-<body>
+<body id="body">
     <!-- Header Start -->
     <header id="header" style="top: 638.438px; ">
         <div class="headerLeft">
@@ -38,13 +38,13 @@
             </a>
         </div>
         <div class="headerMiddle">
-            <ul>
-                <li><a href="">Anasayfa</a></li>
-                <li><a href="">Hakkimda</a></li>
-                <li><a href="">İletisim</a></li>
-                <li><a href="">Hizmetler</a></li>
-                <li><a href="">Gorus</a></li>
-                <li><a href="">Galeri</a></li>
+            <ul id="navLinks">
+                <li><a href="#firstSection">Anasayfa</a></li>
+                <li><a href="#about">Hakkimda</a></li>
+                <li><a href="#contact">İletisim</a></li>
+                <li><a href="#servicesContainer">Hizmetler</a></li>
+                <li><a href="#meet">Gorus</a></li>
+                <li><a href="#gallery">Galeri</a></li>
             </ul>
         </div>
         <div class="headerRight">
@@ -56,7 +56,7 @@
     <!-- Header End -->
     <!-- Main Start -->
     <main id="content">
-        <section class="firstSection">
+        <section class="firstSection" id="firstSection">
             <div class="firstSectionImage zooming" style="background-image: url(./assets/image/bg-intro.jpg);"></div>
             <div class="containerForPage firstSectionContent">
                 <div class="rowForPage firstSectionContentRow">
@@ -78,7 +78,7 @@
             </div>
         </section>
 
-        <section class="secondSection" id="secondSection">
+        <section class="secondSection" id="about">
             <div class="containerForPage">
                 <h3 class="secondSectionTitle">
                     Hakkımda
@@ -320,7 +320,7 @@
 
 
 
-        <section class="thirdSection">
+        <section class="thirdSection" id="contact">
             <div class="thirdSectionImage"></div>
             <div class="thirdSectionImage"></div>
             <div class="containerForPage">
@@ -544,7 +544,7 @@
                 </a>
             </div>
         </section>
-        <section class="fifthSection">
+        <section class="fifthSection" id="meet">
             <div class="containerForPage">
                 <h3 class="fifthSectionTitle">
                     Hasta ve Danışan Görüşleri
@@ -677,7 +677,7 @@
                 </a>
             </div>
         </section>
-        <section class="sixthSection">
+        <section class="sixthSection" id="gallery">
             <div class="containerForPage">
                 <h3 class="sixthSectionTitle">Galeri</h3>
                 <div class="rowForPage">

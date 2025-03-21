@@ -14,6 +14,10 @@ const resumeCard = document.getElementById("resumeCard");
 const servicesContainer = document.getElementById("servicesContainer");
 const galleryContainer = document.getElementById("customize-thumbnails-gallery");
 const loading = document.getElementById('loading')
+
+const sections = document.querySelectorAll("section");
+const navLinks = document.querySelectorAll("#navLinks li a");
+
 function loadingFnc() {
     if (loading) {
         loading.style.display = 'flex';
@@ -22,7 +26,7 @@ function loadingFnc() {
         }, 2000);
     }
 }
-// loadingFnc()
+loadingFnc()
 
 function fixedHeader() {
     window.addEventListener('scroll', function () {
@@ -186,7 +190,6 @@ function about1() {
 }
 
 
-const secondSection=document.getElementById('secondSection')
 
 function aboutSections(buttons, containers, itemsList) {
     buttons.forEach((btn, i) => {
@@ -221,6 +224,32 @@ function aboutSections(buttons, containers, itemsList) {
 }
 
 
+function setActiveLink() {
+    let currentSection = null;
+
+    sections.forEach((section) => {
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.clientHeight;
+
+        if (window.scrollY >= sectionTop - sectionHeight / 3) {
+            currentSection = section;
+        }
+    });
+
+    if (currentSection) {
+        const currentId = currentSection.getAttribute("id");
+
+        navLinks.forEach((link) => {
+            link.classList.remove("aActive");
+            if (link.getAttribute("href").substring(1) === currentId) {
+                link.classList.add("aActive");
+            }
+        });
+    }
+}
+
+
+
 
 document.addEventListener("DOMContentLoaded", function () {
     let buttons = document.querySelectorAll(".seeMoreBtns");
@@ -229,7 +258,16 @@ document.addEventListener("DOMContentLoaded", function () {
     let containers = document.querySelectorAll(".resumeList"); // Changed ID to class
     let itemsList = Array.from(containers);
     aboutSections(buttons, resumeCards, itemsList);
+
+    window.addEventListener("scroll", setActiveLink);
+    setActiveLink(); // Run once on load
+
 });
+
+
+
+
+
 fixedHeader()
 goToTop()
 galleryItem()
