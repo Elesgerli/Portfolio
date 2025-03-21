@@ -769,6 +769,49 @@ ul {
                 }
             }
 
+            .socialMedia {
+                margin-bottom: 0;
+                color: #fff;
+                position: relative;
+                display: inline-block;
+                vertical-align: middle;
+                line-height: 1;
+                text-align: center;
+                height: 36px;
+                width: 36px;
+                font-size: 16px;
+                transition: all .2s ease-in-out;
+
+                i {
+                    position: relative;
+                    z-index: 2;
+                    line-height: 36px;
+                }
+
+                &:hover {
+                    color: #4f86ac;
+                }
+
+                &:hover::before {
+                    background-color: #fff;
+                }
+
+                &::before {
+                    background-color: #4f86ac;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    bottom: 0;
+                    right: 0;
+                    content: ' ';
+                    transition: all .3s ease-in-out;
+                    font-size: 16px;
+                    line-height: 1;
+
+
+                }
+            }
+
             .resumeCardTopContent {
                 margin-bottom: 0;
                 font-size: 16px;

@@ -22,7 +22,7 @@ function loadingFnc() {
         }, 2000);
     }
 }
-loadingFnc()
+// loadingFnc()
 
 function fixedHeader() {
     window.addEventListener('scroll', function () {
@@ -186,6 +186,7 @@ function about1() {
 }
 
 
+const secondSection=document.getElementById('secondSection')
 
 function aboutSections(buttons, containers, itemsList) {
     buttons.forEach((btn, i) => {
@@ -194,9 +195,12 @@ function aboutSections(buttons, containers, itemsList) {
         if (servicesContainer.children.length > 2) {
             btn.style.display = "flex";
             btn.style.justifyContent = "center";
-            containerBox.style.height = "260px"; // Initial height
-            containerBox.style.overflow = "hidden"; // Initial height
+            containerBox.style.height = "260px";
+            containerBox.style.overflow = "hidden";
+            secondSection.style.height = "900px"
+
             containerBox.style.transition = "height 0.5s ease-in-out";
+            secondSection.style.transition = "height 0.5s ease-in-out";
         } else {
             btn.style.display = "none";
         }
@@ -207,10 +211,12 @@ function aboutSections(buttons, containers, itemsList) {
 
             if (containerBox.classList.contains("expanded")) {
                 containerBox.style.height = containerBox.scrollHeight + "px";
+                secondSection.style.height = secondSection.scrollHeight + "px";
 
                 btn.firstElementChild.textContent = "Azini göster";
             } else {
                 containerBox.style.height = "260px";
+                secondSection.style.height = "900px"
 
                 btn.firstElementChild.textContent = "Tümünü göster";
             }
