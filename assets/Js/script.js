@@ -1,3 +1,5 @@
+const seeMoreBtns = document.querySelectorAll("seeMoreBtns");
+const resumeCards = document.querySelectorAll("resumeCards");
 const header = document.getElementById('header')
 const goTopIcon = document.getElementById('goTopIcon')
 const galleryItems = document.querySelectorAll(".masonry-item2");
@@ -6,9 +8,22 @@ const servicesItems = document.querySelectorAll(".fourthSectionColInsideItem");
 const seeMoreBtn = document.getElementById("seeMoreBtn");
 const seeMoreBtn3 = document.getElementById("seeMoreBtn3");
 const seeMoreBtn4 = document.getElementById("seeMoreBtn4");
+const seeMoreBtn5 = document.getElementById("seeMoreBtn5");
 const testimonialContainer = document.getElementById("galleryContainer2");
+const resumeCard = document.getElementById("resumeCard");
 const servicesContainer = document.getElementById("servicesContainer");
 const galleryContainer = document.getElementById("customize-thumbnails-gallery");
+const loading = document.getElementById('loading')
+function loadingFnc() {
+    if (loading) {
+        loading.style.display = 'flex';
+        setTimeout(() => {
+            loading.style.display = 'none';
+        }, 2000);
+    }
+}
+loadingFnc()
+
 function fixedHeader() {
     window.addEventListener('scroll', function () {
         if (window.scrollY >= 560) {
@@ -111,7 +126,6 @@ function services() {
         seeMoreBtn4.style.justifyContent = "center";
 
         servicesItems.forEach((item, index) => {
-            console.log(index)
             if (index >= 9) {
                 servicesContainer.style.height = "700px"
                 servicesContainer.style.transition = 'height 0.5s ease-in-out'
@@ -139,8 +153,84 @@ function services() {
 
     });
 }
+
+function about1() {
+
+    if (resumeCard.scrollHeight >= 255) {
+        seeMoreBtn5.style.display = "flex";
+        seeMoreBtn5.style.justifyContent = "center";
+
+        resumeCard.style.height = "255px"
+        resumeCard.style.transition = 'height 0.5s ease-in-out'
+
+    } else {
+        seeMoreBtn5.style.display = 'none'
+    }
+
+    seeMoreBtn5.addEventListener("click", function (e) {
+        e.preventDefault()
+        resumeCard.classList.toggle("expanded");
+
+        if (resumeCard.classList.contains("expanded")) {
+            let fullHeight = resumeCard.scrollHeight + "px";
+
+            resumeCard.style.height = fullHeight;
+            seeMoreBtn5.firstElementChild.textContent = "Azini göster";
+        } else {
+            resumeCard.style.height = "260px"
+
+            seeMoreBtn5.firstElementChild.textContent = "Tümünü göster";
+        }
+
+    });
+}
+
+
+
+function aboutSections(buttons, containers, itemsList) {
+    buttons.forEach((btn, i) => {
+        let servicesContainer = itemsList[i];
+        let containerBox = containers[i]
+        if (servicesContainer.children.length > 2) {
+            btn.style.display = "flex";
+            btn.style.justifyContent = "center";
+            containerBox.style.height = "260px"; // Initial height
+            containerBox.style.overflow = "hidden"; // Initial height
+            containerBox.style.transition = "height 0.5s ease-in-out";
+        } else {
+            btn.style.display = "none";
+        }
+
+        btn.addEventListener("click", function (e) {
+            e.preventDefault();
+            containerBox.classList.toggle("expanded");
+
+            if (containerBox.classList.contains("expanded")) {
+                containerBox.style.height = containerBox.scrollHeight + "px";
+
+                btn.firstElementChild.textContent = "Azini göster";
+            } else {
+                containerBox.style.height = "260px";
+
+                btn.firstElementChild.textContent = "Tümünü göster";
+            }
+        });
+    });
+}
+
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    let buttons = document.querySelectorAll(".seeMoreBtns");
+    let resumeCards = document.querySelectorAll(".resumeCards");
+
+    let containers = document.querySelectorAll(".resumeList"); // Changed ID to class
+    let itemsList = Array.from(containers);
+    aboutSections(buttons, resumeCards, itemsList);
+});
 fixedHeader()
 goToTop()
 galleryItem()
 testimonial()
 services()
+about1()

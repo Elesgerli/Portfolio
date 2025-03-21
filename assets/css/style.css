@@ -1,5 +1,6 @@
 @import url(https://fonts.googleapis.com/css?family=Dosis:200,300,regular,500,600,700,800);
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:300,regular,500,600,700,800,300italic,italic,500italic,600italic,700italic,800italic);
+@import url(https://db.onlinewebfonts.com/c/f93da376ceb535ea82334cf2854fc62f?family=themify);
 
 * {
     margin: 0;
@@ -444,23 +445,6 @@ ul {
     }
 }
 
-.secondSection {
-    position: relative;
-    padding-top: 80px;
-    padding-bottom: 80px;
-    background-color: #eff2f5;
-    overflow: hidden;
-}
-
-.secondSectionTitle {
-    margin-bottom: 80px;
-    text-align: center;
-    font-weight: 500;
-    font-size: 36px;
-    letter-spacing: 0.05em;
-    text-transform: uppercase;
-    font-family: "Dosis", sans-serif;
-}
 
 
 #footer {
@@ -694,6 +678,475 @@ ul {
     transition: height 0.5s ease-in-out;
 }
 
+.secondSection {
+    position: relative;
+    padding-top: 80px;
+    padding-bottom: 80px;
+    background-color: #eff2f5;
+    overflow: hidden;
+
+    .secondSectionTitle {
+        margin-bottom: 80px;
+        text-align: center;
+        font-weight: 500;
+        font-size: 36px;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+        font-family: "Dosis", sans-serif;
+    }
+
+    .secondSectionItem {
+        min-height: 1px;
+        padding-right: 15px;
+        padding-left: 15px;
+        left: 16.66666667%;
+    }
+
+    .resumeCard {
+        position: relative;
+        margin-bottom: 30px;
+        background: #fff;
+        padding: 33px;
+        overflow: hidden;
+
+        .resumeCardTop {
+
+            .resumeCardTopTitle2 {
+                margin-bottom: 0;
+                margin: 0 0 15px 0;
+                padding: 0;
+                list-style: none;
+
+                li {
+                    border-bottom: 0;
+                    position: relative;
+                    padding: 0 0 0 36px;
+                    margin-bottom: 15px;
+                    padding-bottom: 15px;
+                    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+
+
+
+                    &::before {
+                        position: absolute;
+                        top: -6px;
+                        left: 0;
+                        font-family: themify;
+                        content: "\e64d";
+                        color: #43aae6;
+                        font-size: 160%;
+                        display: inline-block;
+                        vertical-align: middle;
+                    }
+                }
+            }
+
+            .resumeCardTopTitle {
+                text-align: center;
+                margin-bottom: 20px;
+
+                .icon {
+                    margin-bottom: 15px;
+                    color: #cab882;
+                    position: relative;
+                    display: inline-block;
+                    font-size: 42px;
+                    width: 56px;
+                    vertical-align: middle;
+                    text-align: center;
+                }
+
+                h5 {
+                    margin-bottom: 32px;
+                    text-transform: uppercase;
+                    font-size: 18px;
+
+                    letter-spacing: 0.05em;
+                    margin-top: 0;
+                    display: block;
+                    font-family: "Dosis", sans-serif;
+                    font-weight: 600;
+                }
+            }
+
+            .resumeCardTopContent {
+                margin-bottom: 0;
+                font-size: 16px;
+                font-weight: 300;
+                margin: 0 0 10px;
+                line-height: 1.4;
+            }
+        }
+
+        .resumeCardBottom {
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            text-align: center;
+            border-radius: 0 0 3px 3px;
+            padding: 15px 0;
+            z-index: 10;
+            display: none;
+
+            &::before {
+                position: absolute;
+                top: 0;
+                left: 0;
+                bottom: 0;
+                right: 0;
+                content: ' ';
+                background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), #fff);
+            }
+
+            a {
+                background-color: #43aae6;
+                position: relative;
+                z-index: 2;
+                color: white;
+                padding: 8px 24px 9px;
+                font-size: 13px;
+                font-weight: 600;
+                border-radius: 30px;
+
+                transition: all .2s ease-out;
+                text-transform: uppercase;
+                font-family: "Dosis", sans-serif;
+                border: none;
+                margin-bottom: 3px;
+                line-height: 1.5;
+                text-align: center;
+                white-space: nowrap;
+                vertical-align: middle;
+                touch-action: manipulation;
+                cursor: pointer;
+
+                &:hover {
+                    background-color: #1d94d9;
+                    border-color: #204d74;
+                }
+
+                &:hover::before {
+                    opacity: 1;
+                    transform: scale(1.02, 1.02);
+                }
+
+                &::before {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    content: ' ';
+
+                    opacity: 0;
+                    transform: scale(.5, .5);
+                    transition: all .4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+                    z-index: 0;
+                    border-radius: 30px;
+                }
+            }
+        }
+    }
+}
+
+.thirdSection {
+    background-color: #eff2f5;
+    position: relative;
+    padding-top: 80px;
+    padding-bottom: 80px;
+    overflow: hidden;
+
+    .thirdSectionImage {
+        animation: zooming 18s infinite both;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-position: center center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        z-index: 0;
+        background-image: url('../image/bg-intro.jpg');
+    }
+
+    .thirdSectionTitle {
+        margin-bottom: 80px;
+        text-align: center;
+        font-size: 36px;
+
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+        margin-top: 0;
+        display: block;
+        font-family: "Dosis", sans-serif;
+        font-weight: 500;
+    }
+
+    .thirdSectionContact {
+        margin-bottom: 30px;
+        background: #fff;
+
+        .thirdSectionContactInside {
+            display: flex;
+
+            .thirdSectionContactInsideLeft {
+                padding: 40px;
+                flex: 0 0 50%;
+
+                .phone {
+                    ul {
+                        list-style: none;
+                        padding: 0;
+                        margin: 0 0 20px;
+
+                        li {
+                            margin-bottom: 5px;
+                            font-size: 18px;
+                            list-style: none;
+
+                            i {
+                                font-size: 120%;
+                                vertical-align: middle;
+                                margin-right: 5px;
+                                color: #43aae6;
+                            }
+
+                            a {
+                                color: inherit;
+                                font-size: 18px;
+                                font-weight: 300;
+                                transition: all .2s ease-in-out;
+                                color: rgb(67, 67, 67);
+                                font-family: "Open Sans", sans-serif;
+                            }
+                        }
+                    }
+
+                    h5 {
+                        font-size: 18px;
+                        margin-bottom: 16px;
+                        font-weight: 600;
+                        letter-spacing: 0.05em;
+                        text-transform: uppercase;
+                        margin-top: 0;
+                        display: block;
+                        font-family: "Dosis", sans-serif;
+                        line-height: 1.1;
+                    }
+                }
+
+                h4 {
+                    font-size: 30px;
+                    margin-bottom: 18px;
+                    font-weight: 100;
+                    margin-top: 0;
+                    display: block;
+                    font-family: "Dosis", sans-serif;
+                    line-height: 1.1;
+                    color: inherit;
+                }
+
+                address {
+                    font-style: normal;
+                    line-height: 1.42857143;
+                    margin-bottom: 25px;
+                }
+            }
+
+            .thirdSectionContactInsideRight {
+                background: transparent url('../image/map-placeholder-300-600.jpg') 100% 100% no-repeat;
+                align-items: center;
+                justify-content: center;
+                display: flex;
+                flex: 0 0 50%;
+
+                a {
+                    background-color: #fff;
+                    color: #434343;
+                    padding: 8px 24px 9px;
+                    position: relative;
+                    font-size: 13px;
+                    font-weight: 600;
+                    border-radius: 30px;
+                    transition: all .2s ease-out;
+                    text-transform: uppercase;
+                    font-family: "Dosis", sans-serif;
+                    border: none;
+                    margin-bottom: 3px;
+                    text-align: center;
+                    white-space: nowrap;
+                    vertical-align: middle;
+                    line-height: 1.5;
+
+                    touch-action: manipulation;
+                    cursor: pointer;
+                    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+
+                    &:hover {
+                        color: #fff !important;
+                    }
+
+                    &:hover::before {
+                        opacity: 1;
+
+                        transform: scale(1.02, 1.02);
+                    }
+
+                    &::before {
+                        background-color: #3c99cf;
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        right: 0;
+                        bottom: 0;
+                        content: ' ';
+                        border-radius: 30px;
+
+                        transform: scale(.5, .5);
+                        transition: all .4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+                        z-index: 0;
+                        opacity: 0;
+                    }
+                }
+            }
+
+        }
+
+        .thirdSectionContactTime {
+            background-color: #43aae6;
+            padding: 10px;
+
+            .thirdSectionContactTimeList {
+                position: relative;
+                display: flex;
+                background-color: #fff;
+
+                .timeListItem {
+                    transition: all .3s ease-in-out;
+                    text-align: center;
+                    background-color: #fff;
+                    padding: 15px 10px;
+                    margin-bottom: 2px;
+                    flex: 1;
+
+                    .timeListItemTime {
+                        padding: 0.25em 0.75em;
+                        font-weight: 600;
+                        border: 1px solid rgba(0, 0, 0, 0.1);
+                        display: inline-block;
+                        margin-bottom: 10px;
+                        transition: all .2s ease-in-out;
+                        color: inherit;
+
+                        &:hover {
+                            background-color: #cab882;
+                            color: #fff;
+                        }
+                    }
+
+                    &:not(:first-child) {
+                        border-left: 2px solid #eff2f5;
+                    }
+
+                    .timeListItemTitle {
+                        font-weight: 500;
+                        font-size: 16px;
+                        margin-bottom: 20px;
+                        text-align: center;
+                        letter-spacing: 0.05em;
+                        text-transform: uppercase;
+                        margin-top: 0;
+                        display: block;
+                        font-family: "Dosis", sans-serif;
+
+                        span {
+                            font-weight: 500;
+                            display: block;
+
+                            &:last-child {
+                                font-size: 14px;
+                                opacity: .6;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .thirdSectionContactTimeTitle {
+                margin: 10px 0 20px;
+                text-align: center;
+                color: #fff;
+                font-size: 30px;
+                font-weight: 100;
+                display: block;
+                font-family: "Dosis", sans-serif;
+            }
+
+            .thirdSectionContactTimeBottom {
+                margin-top: 10px;
+                text-align: center;
+                color: #fff;
+
+                a {
+                    background-color: #fff;
+                    color: #434343;
+                    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+                    padding: 8px 24px 9px;
+                    position: relative;
+                    font-size: 13px;
+                    font-weight: 600;
+                    border-radius: 30px;
+                    transition: all .2s ease-out;
+                    text-transform: uppercase;
+                    font-family: "Dosis", sans-serif;
+                    border: none;
+                    margin-bottom: 3px;
+                    text-align: center;
+                    white-space: nowrap;
+                    vertical-align: middle;
+                    touch-action: manipulation;
+                    display: inline-block;
+                    cursor: pointer;
+                    line-height: 1.5;
+
+                    &:hover {
+                        color: white;
+                    }
+
+                    &:hover::before {
+                        opacity: 1;
+                        transform: scale(1.02, 1.02);
+                    }
+
+                    &::before {
+                        background-color: #3c99cf;
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        right: 0;
+                        bottom: 0;
+                        content: ' ';
+                        border-radius: 30px;
+
+                        transform: scale(.5, .5);
+                        transition: all .4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+                        z-index: 0;
+                        opacity: 0;
+                    }
+
+                    span {
+                        position: relative;
+                        z-index: 1;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
 .fourthSection {
     position: relative;
     padding-top: 80px;
@@ -735,6 +1188,7 @@ ul {
             .fourthSectionColInside {
                 position: relative;
                 background: #fff;
+
                 .fourthSectionColInsideItem {
 
                     position: relative;
@@ -766,6 +1220,7 @@ ul {
             }
         }
     }
+
     .fourthSectionBtnBox {
         position: absolute;
         left: 0;
@@ -774,7 +1229,8 @@ ul {
         text-align: center;
         padding: 30px 0;
         z-index: 10;
-display: none;
+        display: none;
+
         &::before {
             position: absolute;
             top: 0;
@@ -1205,7 +1661,8 @@ display: none;
 
     .sixthSectionTitle,
     .fifthSectionTitle,
-    .fourthSectionTitle {
+    .fourthSectionTitle,
+    .thirdSectionTitle {
         margin-bottom: 60px !important;
     }
 
@@ -1224,7 +1681,8 @@ display: none;
     .secondSection,
     .seventhSection,
     .fifthSection,
-    .fourthSection {
+    .fourthSection,
+    .thirdSection {
         padding-top: 60px !important;
         padding-bottom: 60px !important;
     }
@@ -1326,7 +1784,9 @@ display: none;
 }
 
 @media (max-width: 991px) {
-    .fourthSectionCol {
+
+    .fourthSectionCol,
+    .secondSectionItem {
         left: 0 !important;
     }
 
@@ -1355,6 +1815,33 @@ display: none;
         h1 {
             font-size: 42px !important;
         }
+    }
+
+    .thirdSectionContactTimeTitle {
+        margin-bottom: 10px !important;
+    }
+
+    .thirdSectionContactTimeList {
+        overflow: auto !important;
+    }
+
+    .timeListItem {
+        flex: 0 0 33.333% !important;
+    }
+
+    .thirdSectionContactInsideLeft {
+        padding: 25px !important;
+        flex: 0 0 100% !important;
+    }
+
+    .thirdSectionContactInsideRight {
+
+        height: 250px !important;
+        flex: 0 0 100% !important;
+    }
+
+    .thirdSectionContactInside {
+        flex-wrap: wrap !important;
     }
 
     .sixthSectionTitle,
