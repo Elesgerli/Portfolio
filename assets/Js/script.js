@@ -197,10 +197,8 @@ function aboutSections(buttons, containers, itemsList) {
             btn.style.justifyContent = "center";
             containerBox.style.height = "260px";
             containerBox.style.overflow = "hidden";
-            secondSection.style.height = "900px"
 
             containerBox.style.transition = "height 0.5s ease-in-out";
-            secondSection.style.transition = "height 0.5s ease-in-out";
         } else {
             btn.style.display = "none";
         }
@@ -211,12 +209,10 @@ function aboutSections(buttons, containers, itemsList) {
 
             if (containerBox.classList.contains("expanded")) {
                 containerBox.style.height = containerBox.scrollHeight + "px";
-                secondSection.style.height = secondSection.scrollHeight + "px";
 
                 btn.firstElementChild.textContent = "Azini göster";
             } else {
                 containerBox.style.height = "260px";
-                secondSection.style.height = "900px"
 
                 btn.firstElementChild.textContent = "Tümünü göster";
             }

@@ -83,9 +83,9 @@
                 <h3 class="secondSectionTitle">
                     Hakkımda
                 </h3>
-                <div class="rowForPage masonry" id="resumeContainer">
-                    <div class="masonry-sizer col-md-4 col-sm-6 col-12"></div>
-                    <div class="masonry-item col-md-4 col-sm-6 col-12 secondSectionItem">
+                <div class="rowForPage row" id="resumeContainer">
+                    <!-- <div class="masonry-sizer col-md-4 col-sm-6 col-12"></div> -->
+                    <div class="col-md-4 col-sm-6 col-12 secondSectionItem">
                         <div class="resumeCard   " id="resumeCard">
                             <div class="resumeCardTop">
                                 <div class="resumeCardTopTitle">
@@ -117,7 +117,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="masonry-item col-md-4 col-sm-6 col-12 secondSectionItem">
+                    <div class="col-md-4 col-sm-6 col-12 secondSectionItem">
                         <div class="resumeCard resumeCards">
                             <div class="resumeCardTop">
                                 <div class="resumeCardTopTitle">
@@ -144,7 +144,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="masonry-item col-md-4 col-sm-6 col-12 secondSectionItem">
+                    <div class="col-md-4 col-sm-6 col-12 secondSectionItem">
                         <div class="resumeCard resumeCards">
                             <div class="resumeCardTop">
                                 <div class="resumeCardTopTitle">
@@ -177,7 +177,7 @@
                     </div>
 
 
-                    <div class="masonry-item col-md-4 col-sm-6 col-12 secondSectionItem">
+                    <div class="col-md-4 col-sm-6 col-12 secondSectionItem">
                         <div class="resumeCard resumeCards">
                             <div class="resumeCardTop">
                                 <div class="resumeCardTopTitle">
@@ -294,7 +294,7 @@
                         </div>
                     </div>
 
-                    <div class="masonry-item col-md-4 col-sm-6 col-12 secondSectionItem">
+                    <div class="col-md-4 col-sm-6 col-12 secondSectionItem">
                         <div class="resumeCard   " id="resumeCard">
                             <div class="resumeCardTop">
                                 <div class="resumeCardTopTitle">
@@ -807,11 +807,14 @@
 
 
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
-        integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- ✅ Updated jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 
-    <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+    <!-- ✅ Updated Masonry CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/4.2.2/masonry.pkgd.min.js"></script>
+
+    <!-- ✅ imagesLoaded (Ensures Masonry waits for images to load) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/5.0.0/imagesloaded.pkgd.min.js"></script>
     <script>
 
         $('.masonry').masonry({
@@ -820,6 +823,7 @@
             percentPosition: !0
         });
 
+     
     </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.8.3/lightgallery.min.js"
         integrity="sha512-n02TbYimj64qb98ed5WwkNiSw/i9Xlvv4Ehvhg0jLp3qMAMWCYUHbOMbppZ0vimtyiyw9NqNqxUZC4hq86f4aQ=="
