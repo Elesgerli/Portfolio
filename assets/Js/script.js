@@ -2,9 +2,12 @@ const header = document.getElementById('header')
 const goTopIcon = document.getElementById('goTopIcon')
 const galleryItems = document.querySelectorAll(".masonry-item2");
 const galleryItems3 = document.querySelectorAll(".masonry-item3");
+const servicesItems = document.querySelectorAll(".fourthSectionColInsideItem");
 const seeMoreBtn = document.getElementById("seeMoreBtn");
 const seeMoreBtn3 = document.getElementById("seeMoreBtn3");
-const galleryContainer3 = document.getElementById("galleryContainer2");
+const seeMoreBtn4 = document.getElementById("seeMoreBtn4");
+const testimonialContainer = document.getElementById("galleryContainer2");
+const servicesContainer = document.getElementById("servicesContainer");
 const galleryContainer = document.getElementById("customize-thumbnails-gallery");
 function fixedHeader() {
     window.addEventListener('scroll', function () {
@@ -29,7 +32,7 @@ function goToTop() {
 
 
 
-function galeryItem() {
+function galleryItem() {
 
     if (galleryItems.length > 3) {
         seeMoreBtn.style.display = "flex";
@@ -65,7 +68,7 @@ function galeryItem() {
 }
 
 
-function galeryItem3() {
+function testimonial() {
 
     if (galleryItems3.length > 2) {
         seeMoreBtn3.style.display = "flex";
@@ -73,8 +76,8 @@ function galeryItem3() {
 
         galleryItems3.forEach((item, index) => {
             if (index >= 2) {
-                galleryContainer3.style.height = "420px"
-                galleryContainer3.style.transition = 'height 0.5s ease-in-out'
+                testimonialContainer.style.height = "420px"
+                testimonialContainer.style.transition = 'height 0.5s ease-in-out'
 
             }
         });
@@ -84,22 +87,60 @@ function galeryItem3() {
 
     seeMoreBtn3.addEventListener("click", function (e) {
         e.preventDefault()
-        galleryContainer3.classList.toggle("expanded");
+        testimonialContainer.classList.toggle("expanded");
 
-        if (galleryContainer3.classList.contains("expanded")) {
-            let fullHeight = galleryContainer3.scrollHeight + "px";
+        if (testimonialContainer.classList.contains("expanded")) {
+            let fullHeight = testimonialContainer.scrollHeight + "px";
 
-            galleryContainer3.style.height = fullHeight;
+            testimonialContainer.style.height = fullHeight;
             seeMoreBtn3.firstElementChild.textContent = "Azini göster";
         } else {
-            galleryContainer3.style.height = "400px"
+            testimonialContainer.style.height = "400px"
 
             seeMoreBtn3.firstElementChild.textContent = "Tümünü göster";
         }
 
     });
 }
+
+
+function services() {
+
+    if (servicesItems.length > 9) {
+        seeMoreBtn4.style.display = "flex";
+        seeMoreBtn4.style.justifyContent = "center";
+
+        servicesItems.forEach((item, index) => {
+            console.log(index)
+            if (index >= 9) {
+                servicesContainer.style.height = "700px"
+                servicesContainer.style.transition = 'height 0.5s ease-in-out'
+
+            }
+        });
+    } else {
+        seeMoreBtn4.style.display = 'none'
+    }
+
+    seeMoreBtn4.addEventListener("click", function (e) {
+        e.preventDefault()
+        servicesContainer.classList.toggle("expanded");
+
+        if (servicesContainer.classList.contains("expanded")) {
+            let fullHeight = servicesContainer.scrollHeight + "px";
+
+            servicesContainer.style.height = fullHeight;
+            seeMoreBtn4.firstElementChild.textContent = "Azini göster";
+        } else {
+            servicesContainer.style.height = "700px"
+
+            seeMoreBtn4.firstElementChild.textContent = "Tümünü göster";
+        }
+
+    });
+}
 fixedHeader()
 goToTop()
-galeryItem()
-galeryItem3()
+galleryItem()
+testimonial()
+services()
