@@ -679,7 +679,175 @@ ul {
 }
 
 .expanded {
-   transition: height 0.5s ease-in-out;
+    transition: height 0.5s ease-in-out;
+}
+
+.fifthSection {
+    position: relative;
+    padding-top: 80px;
+    padding-bottom: 80px;
+    overflow: hidden;
+
+    .testimonialBtnBox {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        text-align: center;
+        padding: 30px 0;
+        z-index: 10;
+
+        &::before {
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            content: ' ';
+            background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), #fff);
+        }
+
+        a {
+            background-color: #43aae6;
+            position: relative;
+            z-index: 2;
+            color: white;
+            padding: 8px 24px 9px;
+            font-size: 13px;
+            font-weight: 600;
+            border-radius: 30px;
+
+            transition: all .2s ease-out;
+            text-transform: uppercase;
+            font-family: "Dosis", sans-serif;
+            border: none;
+            margin-bottom: 3px;
+            line-height: 1.5;
+            text-align: center;
+            white-space: nowrap;
+            vertical-align: middle;
+            touch-action: manipulation;
+            cursor: pointer;
+
+            &:hover {
+                background-color: #1d94d9;
+                border-color: #204d74;
+            }
+
+            &:hover::before {
+                opacity: 1;
+                transform: scale(1.02, 1.02);
+            }
+
+            &::before {
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                content: ' ';
+
+                opacity: 0;
+                transform: scale(.5, .5);
+                transition: all .4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+                z-index: 0;
+                border-radius: 30px;
+            }
+        }
+    }
+
+    .fifthSectionTitle {
+        margin-bottom: 80px;
+        text-align: center;
+        font-size: 36px;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+        margin-top: 0;
+        display: block;
+        font-family: "Dosis", sans-serif;
+        font-weight: 500;
+
+
+    }
+
+    .rowForPage {
+        .col-sm-6 {
+            padding-right: 15px;
+            padding-left: 15px;
+
+            .testimonial {
+                position: relative;
+                background-color: #eff2f5;
+                padding: 60px 40px 40px 70px;
+                border: none;
+                margin-bottom: 30px;
+
+                &::before {
+                    position: absolute;
+                    top: -20px;
+                    left: 30px;
+                    font-size: 400px;
+                    content: '\201D';
+                    font-family: "Dosis", sans-serif;
+                    color: #fff;
+                    line-height: 1;
+                    z-index: 0;
+                }
+
+                .testimonialTop {
+                    font-size: 18px;
+                    font-weight: 500;
+                    line-height: 1.7;
+                    color: rgb(67, 67, 67);
+                    margin-bottom: 15px;
+                    position: relative;
+                    z-index: 1;
+                }
+
+                .testimonialBottom {
+
+                    position: relative;
+                    margin-top: 30px;
+                    padding-left: 74px;
+                    line-height: 1.2;
+                    text-align: left;
+                    z-index: 1;
+
+                    img {
+
+                        position: absolute;
+                        top: -12px;
+                        left: 0;
+                        width: 58px;
+                        height: 58px;
+                        border-radius: 50%;
+                        max-width: 100%;
+                        -webkit-backface-visibility: hidden;
+                    }
+
+                    .testimonialName {
+
+                        font-weight: 500;
+                        font-size: 15px;
+                        font-family: "Dosis", sans-serif;
+                        line-height: 1.2;
+                        text-align: left;
+                    }
+
+                    .testimonialRate {
+                        margin-top: 3px;
+
+                        i {
+                            font-size: 14px;
+                            opacity: 1;
+                            color: #eecd35 !important;
+                        }
+                    }
+                }
+
+            }
+        }
+    }
 }
 
 .sixthSection {
@@ -881,7 +1049,8 @@ ul {
         width: 970px !important;
     }
 
-    .sixthSectionTitle {
+    .sixthSectionTitle,
+    .fifthSectionTitle {
         margin-bottom: 60px !important;
     }
 
@@ -898,7 +1067,8 @@ ul {
     }
 
     .secondSection,
-    .seventhSection {
+    .seventhSection,
+    .fifthSection {
         padding-top: 60px !important;
         padding-bottom: 60px !important;
     }
@@ -1027,7 +1197,8 @@ ul {
         }
     }
 
-    .sixthSectionTitle {
+    .sixthSectionTitle,
+    .fifthSectionTitle {
         font-size: 26px !important;
     }
 
